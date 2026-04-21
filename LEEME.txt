@@ -1,0 +1,59 @@
+PORTAFOLIO NETLIFY - INSTRUCCIONES
+
+ARCHIVOS DE LA CARPETA
+- index.html -> estructura principal de la web
+- style.css -> estilos
+- script.js -> ventana modal para ampliar renders
+- assets/ -> imágenes
+
+IMÁGENES INCLUIDAS
+- APTO_2026.jpg
+- APTO_2026_DETALLE.jpg
+- APTO_COCCINA_2026_3.jpg
+- tunel-vertical.jpg
+
+COMO CAMBIAR LOS RENDERS RAPIDO
+OPCION 1 - REEMPLAZAR SIN TOCAR CODIGO
+1. Entra a la carpeta assets.
+2. Toma tu nuevo render.
+3. Renómbralo exactamente igual al archivo que quieres reemplazar.
+4. Borra la imagen vieja y pega la nueva.
+5. Abre index.html para revisar el cambio.
+
+EJEMPLO:
+Si quieres cambiar la cocina, reemplaza:
+assets/APTO_COCCINA_2026_3.jpg
+por otra imagen con ese mismo nombre.
+
+OPCION 2 - AGREGAR UN RENDER NUEVO
+1. Copia la nueva imagen dentro de assets.
+2. Ponle un nombre simple, por ejemplo: sala-nocturna.jpg
+3. Abre index.html
+4. Busca la seccion <div class="gallery-grid">
+5. Copia uno de los bloques <article class="card"> ... </article>
+6. Pegalo debajo y cambia estas partes:
+   - data-image="./assets/sala-nocturna.jpg"
+   - src="./assets/sala-nocturna.jpg"
+   - alt="Descripcion de la imagen"
+   - <h3>Titulo</h3>
+   - <p>Descripcion corta</p>
+
+BLOQUE DE EJEMPLO
+<article class="card" tabindex="0"
+  data-image="./assets/sala-nocturna.jpg"
+  data-title="Sala nocturna"
+  data-description="Visualización interior con iluminación cálida.">
+  <img src="./assets/sala-nocturna.jpg" alt="Render interior nocturno" width="768" height="1024" loading="lazy">
+  <div class="card-body">
+    <h3>Sala nocturna</h3>
+    <p>Visualización interior con iluminación cálida.</p>
+  </div>
+</article>
+
+COMO SUBIRLO A NETLIFY
+1. Entra a https://www.netlify.com
+2. Ve a Projects.
+3. Busca la caja Upload your project files.
+4. Da clic en choose a folder.
+5. Selecciona la carpeta completa portafolio-renderista-netlify.
+6. Espera a que Netlify publique el sitio.
