@@ -288,3 +288,114 @@ body.modal-open { overflow: hidden; }
   .btn { width: 100%; text-align: center; }
   .lightbox { padding: 12px; }
 }
+
+
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.hero-points span {
+  padding: 12px 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.services-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.trust-card,
+.cta-strip-box {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.trust-card {
+  padding: 24px;
+}
+
+.trust-card h3 {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.trust-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.cta-strip-box {
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.contact-links {
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+}
+
+.contact-links a,
+.contact-links span {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .services-grid,
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-strip-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero-grid,
+  .intro-grid,
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .card-large,
+  .card-wide {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid,
+  .trust-grid,
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 32px 0 56px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+}
